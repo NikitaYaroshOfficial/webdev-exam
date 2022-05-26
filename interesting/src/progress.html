@@ -1,0 +1,41 @@
+<style>
+    body{
+        color: white;
+        font-family: Century Gothic;
+    }
+</style>
+<p id='p'>BROKENPROGRESS (0/10);</p>
+<p id='pp' style='font-family: monospace; cursor: not-allowed;'></p>
+<input id='max' type='number' placeholder='Максимум прогрессбара' value='10' onchange="javascript:reloadvalues();">
+                <script>
+                    var max = 10;
+                    var progr = 0;
+                    function prup(){
+                    x = setInterval(function(){
+                        if(progr==max-1){
+                            clearInterval(x);
+                            prdown();
+                        }
+                        progr = progr+1;
+                        document.getElementById('p').innerHTML = 'BROKENPROGRESS ('+progr+'/'+max+')';
+                        document.getElementById('pp').innerHTML = '['+'█'.repeat(progr)+'&nbsp'.repeat(max-progr)+']';
+                    },100);}
+                    function prdown(){
+                        y = setInterval(function(){
+                        if(progr==1){
+                            clearInterval(y);
+                            prup();
+                        }
+                        progr = progr-1;
+                        document.getElementById('p').innerHTML = 'BROKENPROGRESS ('+progr+'/'+max+')';
+                        document.getElementById('pp').innerHTML = '['+'█'.repeat(progr)+'&nbsp'.repeat(max-progr)+']';
+                    },100);}
+                    function reloadvalues(){
+                        max = document.getElementById('max').value;
+                        clearInterval(x);
+                        clearInterval(y);
+                        progr=0;
+                        prup()
+                    }
+                    prup();
+                </script>
