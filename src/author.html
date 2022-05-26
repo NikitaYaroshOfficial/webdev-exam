@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel='stylesheet' href='../css/style.css'>
+        <script src='js/secret.js'></script>
+        <script>
+            function roll(){
+                document.body.style.transition = '0.9s';
+                document.body.style.transform = 'rotate(360deg)';
+                setTimeout(function(){
+                    document.body.style.transition = '0s';
+                    document.body.style.transform = 'none';
+                    document.body.style.transition = '0.5s';
+                },1000);
+            }
+            function askew(){
+                document.body.style.transition = '0.9s';
+                document.body.style.transform = 'skew(-10deg)';
+                setTimeout(function(){
+                    document.body.style.transition = '0s';
+                    document.body.style.transform = 'none';
+                    document.body.style.transition = '0.5s';
+                },1000);
+            }
+        </script>
+        <title>Питомник кошек - От автора</title>
+    </head>
+    <body style='background-color: darkcyan'>
+        <header>
+            <nav>
+                <div class="menu" id='menu'><div class='pc'><a class='element' href='../index.html'><img src='../img/logo.png' height='30' width='90'>Главная</a><a class='element' href='../about.html'>О питомнике</a><a class='element' href='../breed.html'>О породе</a><a class='element' href='../interesting/index.html'>Это интересно</a><a class='element' href='../gallery/index.html'>Галерея</a><a class='element' href='../map.html'>Карта сайта</a></div><div class='mobile'><center><a href='../index.html'><img src='../img/logo.png'></a><a class='element' href='../map.html'>Карта сайта</a></center></div></div>
+                <a class='totop' href='#top'>↑</a>
+            </nav>
+        </header>
+        <main id='top'>
+            <center><h1>От Автора</h1></center>
+            <a class='button' href='javascript:roll();'>BarrelRoll</a>
+            <a class='button' href='javascript:askew();'>Skew</a>
+            <h2>Веб-скринсейверы</h2>
+            <h3>Кошка-скринсейвер</h3>
+            <iframe class='silentiframe' src='cat_screensaver.html' width=500 height=250></iframe>
+            <br/><br/>
+            <a href='cat_screensaver.html' class='button'>Во весь экран</a>
+            <br/><br/>
+            <h3>Скринсейвер-игра</h3>
+            <iframe class='silentiframe' src='game_screensaver.html' width=500 height=250></iframe>
+            <br/><br/>
+            <a href='game_screensaver.html' class='button'>Во весь экран</a>
+            <br/><br/>
+            <h2>Сломанный прогрессбар(просьба не чинить)</h2>
+            <iframe class='silentiframe' src='progress.html'>
+            </iframe>
+            <h2>Настройка цвета</h2>
+            <iframe class='silentiframe' src='colour.html'>
+            </iframe>
+            <a class='button' href=''></a>
+        </main>
+        <footer>
+            <b>©2022 Copyright NikitaYarosh</b>
+        </footer>
+    </body>
+</html>
